@@ -1,0 +1,23 @@
+{
+  "name": "lmar-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GSG-G8/LMAR_Express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GSG-G8/LMAR_Express/issues"
+  },
+  "homepage": "https://github.com/GSG-G8/LMAR_Express#readme",
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}
