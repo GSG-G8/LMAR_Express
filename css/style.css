@@ -1,0 +1,75 @@
+/* Start Golbal */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: regular;
+    color: #4a4a4a;
+  }
+  
+  a {
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .container {
+    max-width: 76%;
+    margin: auto;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  @font-face {
+    font-family: bolde;
+    src: url("../fonts/Roboto-Bold.ttf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: medeum;
+    src: url("../fonts/Roboto-Medium.ttf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: regular;
+    src: url("../fonts/Roboto-Regular.ttf") format("opentype");
+  }
+  
+  section {
+    padding: 70px;
+  }
+  /* End Golbal */
+
+  /* Start Main Header */
+  #header {
+      height: 70px;
+  }
+
+  #header .container {
+      height: 100%;
+  }  
+
+  .header__navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+  }
+
+  .header__rightnav {
+      display: flex;
+      justify-content: space-between;
+      width: 18%;
+  }
+
+  .fa-shopping-cart {
+      font-size: 20px;
+      color: #0f6155;
+  }
+
+  .fa-shopping-cart:hover {
+      color: #a6b76f;
+  }
+  /* End Main Header  */
