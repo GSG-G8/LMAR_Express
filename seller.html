@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LAMAR EXPRESS</title>
+    <script src="https://kit.fontawesome.com/31b25a48cc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Start Main Header  -->
+    <header id="header">
+        <div class="container">
+            <nav class="header__navbar">
+                <!-- Start Logo  -->
+                <div class="header__logo">
+                    <a href="seller.html.html">
+                        <img src="images/2591879936_67270a1b-efca-4ecf-8988-186863f6853d.png" alt="LAMAR" width="200px" height="55px">
+                    </a>
+                </div>
+                <!-- End Logo -->
+                <div class="header__rightnav">
+                    <a href="customer.html" class="header__a"><i class="fas fa-backward"></i></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- End Main Header -->
+
+    <!-- Start Form Section -->
+    <section id="form">
+        <!-- Start Add Form -->
+        <div class="form__add">
+           <label for="name">Name:</label>
+           <input type="text" id="name">
+           <label for="details">Details</label>
+           <textarea id="details" cols="30" rows="5"></textarea>
+           <label for="price">Price</label>
+           <input type="number" id="number">$
+           <label for="image">Image [url]</label>
+           <input type="text" id="img-url">
+           <label for="category">Category</label>
+           <select id="category">
+               <option value="">Women</option>
+               <option value="">Men</option>
+               <option value="">Kids</option>
+               <option value="">Accessories</option>
+           </select>
+        </div>
+        <!-- End Add Form -->
+        <!-- Start Edit Form -->
+        <div class="form__edit">
+
+        </div>
+        <!-- End Edit Form -->
+    </section>
+    <!-- End Form Section -->
+
+    <!-- Start Products Section -->
+    <section id="products">
+        <div class="conntainer">
+            <div class="products__searchbar">
+                <input type="text" placeholder="Search by name">
+                <div class="products__display">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-th-large"></i>
+                </div>
+                <div class="products__filter">
+                    <label for="">Filter by</label>
+                    <select name="" id="">
+                        <option value="">Price</option>
+                        <option value="">Category</option>
+                    </select>
+                </div>
+            </div>
+            <div class="products__items">
+                <div class="products__item">
+                    <div class="products__add">
+                        <span class="products__price">20$</span>
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                    <div class="products__details">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Products Section -->
+
+    <!-- Start Footer  -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer__contact">
+                <p class="footer__phone">Phone: +564855554</p>
+                <p class="footer__email">Email: lamar@gmail.com</p>
+                <div class="footer__social">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                </div>
+            </div>
+            <div class="footer__letter">
+                <p>You can trust us, we only send promo offers.</p>
+                <input type="email" placeholder="Your Email Address" class="footer__input">
+                <button class="footer__btn">Subscribe</button>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+</body>
+</html>
