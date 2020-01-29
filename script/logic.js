@@ -7,18 +7,24 @@ let addItem = function addItem(array, item) {
   return [...array, item];
 };
 
-let deleteItemById = function(array, delId) {
+
+let deleteItemById = function (array, delId) {
   return array.filter(val => val.id !== delId);
 };
+
+function clearList() {
+  localStorage.removeItem("productsDataBase");
+}
 
 let searchFunction = function searchItem(array, searchInput) {
   return array.filter((val, index) => array[index].title.includes(searchInput));
 };
 
-if (typeof module !== undefined) {
+if (typeof module !== "undefined") {
   module.exports = {
     addItem,
     deleteItemById,
-    searchFunction
+    searchFunction,
+    clearList
   };
 }
