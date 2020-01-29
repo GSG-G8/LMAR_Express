@@ -38,7 +38,7 @@
   }
   
   section {
-    padding: 70px;
+    padding: 50px 0;
   }
   /* End Golbal */
 
@@ -61,15 +61,188 @@
   .header__rightnav {
       display: flex;
       justify-content: space-between;
-      width: 18%;
+      width: 25%;
   }
 
   .fa-shopping-cart {
       font-size: 20px;
-      color: #0f6155;
+      color: #087e8b;
   }
 
   .fa-shopping-cart:hover {
-      color: #a6b76f;
+      color: #0bafc1;
+  }
+
+  .header__p {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .header__a {
+    padding: 7px 7px;
+    border-radius: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #087e8b;
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+  }
+
+  .header__a:hover {
+    background-color: #0bafc1;
   }
   /* End Main Header  */
+
+  /* Start Shop Section  */
+  #shop {
+    height: 70vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/28092304_modern-business-woman-portrait.jpg") no-repeat 50% 15%;
+    background-size: cover;
+  }
+
+  .shop__contain {
+    position: absolute;
+    top: 50%;
+    left: 27%;
+    transform: translate(-50%,-50%);
+    letter-spacing: 3px;
+  }
+
+  .shop__head {
+    font-family: bolde;
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+
+  .shop__head span {
+    color: #087e8b;
+  }
+
+  .shop__p {
+    display: inline-block;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    padding: 15px;
+    margin: 25px 0 55px 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #a5a5a5;
+  }
+
+  .shop__a {
+    display: block;
+    width: 132px;
+    padding: 12px 10px;
+    border-radius: 8px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid #087e8b;
+    color: #087e8b;
+    font-family: medeum;
+  }
+
+  .shop__a:hover {
+    background-color: #087e8b;
+    color: #fff;
+  }
+  /* End Shop Section */
+
+  /* Start Products Section */
+
+  .products__searchbar {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .products__search {
+    font-size: 16px;
+    padding: 5px 10px 5px 40px;
+    background: url(../images/search-icon.png) no-repeat;
+    background-position: 6px 4px;
+    border: 1px solid #4a4a4a;
+  }
+
+  .products__search:focus {
+    border: 1px solid #087e8b;
+  }
+
+  .products__display {
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .products__icon {
+    font-size: 20px;
+  }
+
+  .products__icon:hover {
+    color: #087e8b;
+    cursor: pointer;
+  }
+
+  .products__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .products__item {
+    background: url("../images/27001163_MediumBlueDenim_001_ProductLarge.jpg") no-repeat center center;
+    background-size: contain;
+    width: 30%;
+    height: 300px;
+    box-shadow: 1px 1px 50px 1px #e6e6e6;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .products__item:hover {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../images/27001163_MediumBlueDenim_001_ProductLarge.jpg") no-repeat center center;
+    background-size: contain;
+  }
+
+  .products__item:hover .products__details {
+    display: block;
+  }
+
+  .products__details {
+    display: none;
+    padding: 40px;
+  }
+
+  .products__details p {
+    color: #fff;
+    text-align: center;
+  }
+
+  .products__add {
+    position: absolute;
+    width: 80%;
+    height: 10%;
+    bottom: 0;
+    background-color: #087e8b;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .products__price, .fa-cart-plus {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .fa-cart-plus:hover {
+    cursor: pointer;
+  }
+
+  .products__item:hover + .products__add{
+    
+  }
+
+  /* End Products Section */
