@@ -26,6 +26,8 @@ let sellerListView = document.querySelector('.seller__icon--list');
 let sellerGridView = document.querySelector('.seller__icon--grid');
 
 let productsItemsSeller = document.querySelector('.products__items');
+let productsItemsCustomer = document.querySelector('.customers__products__items');
+
 let body = document.querySelector('body');
 
 // The Customer Page
@@ -65,11 +67,15 @@ function productsObject() {
     }
 }
 
-addButton.addEventListener('click', function () {
-    productsDataBase = addItem(productsDataBase, productsObject());
-    localStorage.setItem("productsDataBase", JSON.stringify(productsDataBase));
-    showProducts();
-});
+if (addButton) {
+    addButton.addEventListener('click', function () {
+        productsDataBase = addItem(productsDataBase, productsObject());
+        localStorage.setItem("productsDataBase", JSON.stringify(productsDataBase));
+        showProducts();
+    });
+
+}
+
 
 
 body.addEventListener('load', showProducts())
@@ -111,15 +117,10 @@ function removeProducts() {
     }
 }
 
-function modifyProducts() {
-
-
-
-}
-
-
 function showProducts() {
     productsItemsSeller.innerHTML = '';
+
+
     for (let i = 0; i < productsDataBase.length; i++) {
 
         productsItemsSeller.innerHTML += `<div class="products__item">
@@ -130,10 +131,14 @@ function showProducts() {
         <div class="products__details">
             <h2> ${productsDataBase[i]["Name"]}</h2>
             <p>${productsDataBase[i]["Details"]}</p>
+            <h3> ${productsDataBase[i]["Category    "]}
         </div>
     </div>`;
+
 
         //adddeven
     }
     removeProducts();
 }
+
+// Cart 
