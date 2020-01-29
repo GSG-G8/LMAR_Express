@@ -2,7 +2,7 @@ const {
   addItem,
   deleteItemById,
   searchFunction,
-  editFunction
+  totalPrice
 } = require("./script/logic");
 
 let itemArray = [
@@ -10,19 +10,19 @@ let itemArray = [
     id: 6,
     title: "t_shirt",
     details: "any details",
-    price: "25$"
+    price: 25
   },
   {
     id: 7,
     title: "hat",
     details: "any details",
-    price: "30$"
+    price: 30
   },
   {
     id: 9,
     title: "hathee",
     details: "any details",
-    price: "30$"
+    price: 30
   }
 ];
 
@@ -32,25 +32,25 @@ let expectedAdditem = [
     id: 6,
     title: "t_shirt",
     details: "any details",
-    price: "25$"
+    price: 25
   },
   {
     id: 7,
     title: "hat",
     details: "any details",
-    price: "30$"
+    price: 30
   },
   {
     id: 9,
     title: "hathee",
     details: "any details",
-    price: "30$"
+    price: 30
   },
   {
     id: 10,
     title: "blouse",
     details: "more de",
-    price: "310$"
+    price: 310
   }
 ];
 
@@ -59,13 +59,13 @@ let expectedDeleteItemById = [
     id: 6,
     title: "t_shirt",
     details: "any details",
-    price: "25$"
+    price: 25
   },
   {
     id: 9,
     title: "hathee",
     details: "any details",
-    price: "30$"
+    price: 30
   }
 ];
 
@@ -74,13 +74,13 @@ let expectedSearchArr = [
     id: 7,
     title: "hat",
     details: "any details",
-    price: "30$"
+    price: 30
   },
   {
     id: 9,
     title: "hathee",
     details: "any details",
-    price: "30$"
+    price: 30
   }
 ];
 //addItem
@@ -91,7 +91,7 @@ describe("Testing addItem  return new array with new element", () => {
         id: 19,
         title: "blouse",
         details: "more de",
-        price: "310$"
+        price: 310
       }).length
     ).toEqual(expectedAdditem.length);
   });
@@ -100,7 +100,7 @@ describe("Testing addItem  return new array with new element", () => {
       id: 19,
       title: "blouse",
       details: "more de",
-      price: "310$"
+      price: 310
     });
     expect(actual[actual.length - 1]).toEqual(
       expectedAdditem[expectedAdditem.length - 1]
@@ -126,5 +126,12 @@ describe("Testing searchFunction return search result", () => {
   test("search the array with string ('ha') to show product that contains this string", () => {
     let actual = searchFunction(itemArray, "ha");
     expect(actual).toEqual(expectedSearchArr);
+  });
+});
+
+describe("Testing totalPrice return the total of price", () => {
+  test("return total price", () => {
+    let actual = totalPrice(itemArray);
+    expect(actual).toEqual(85);
   });
 });
