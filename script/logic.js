@@ -7,7 +7,12 @@ let addItem = function addItem(array, item) {
   return [...array, item];
 };
 
-if (typeof module !== undefined) {
+function clearList() {
+  localStorage.removeItem("productsDataBase");
+}
+
+if (typeof module !== "undefined") {
+  console.log(111, module)
   module.exports = {
     addItem
   };
