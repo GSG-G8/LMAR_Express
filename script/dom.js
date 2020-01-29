@@ -137,3 +137,19 @@ function showProducts() {
     }
     removeProducts();
 }
+
+
+// search
+searchTodo.addEventListener('keyup', function() {
+  let filter = searchInput.value.toUpperCase();
+  let item = document.querySelector('.products__item');
+  for (let i = 0; i < item.length; i++) {
+    let title = item[i].getElementsByTagName('h2')[0];
+    let titleVal = title.textContent;
+    if (titleVal.toUpperCase().indexOf(filter) > -1) {
+      item[i].style.display = '';
+    } else {
+      item[i].style.display = 'none';
+    }
+  }
+});
