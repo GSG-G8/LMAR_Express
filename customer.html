@@ -20,8 +20,11 @@
                 </div>
                 <!-- End Logo -->
                 <div class="header__rightnav">
-                    <a href="cart.html" class="header__a"><i class="fas fa-shopping-cart"></i></a>
-                    <a href="seller.html" class="header__a">Are you seller?</a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    <div class="header__seller">
+                        <p class="header__p">Are you seller?</p>
+                        <a href="seller.html" class="header__a">Click here</a>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -30,9 +33,10 @@
 
     <!-- Start Shop Section -->
     <section id="shop">
-        <div class="container">
+        <div class="container"></div>
             <div class="shop__contain">
-                <h1 class="shop__head">Today only <span>Sale</span> up to 50% off</h1>
+                <h1 class="shop__head">Today only <span>Sale</span><br>up to 50% off</h1>
+                <p class="shop__p">Show your personal style</p>
                 <a href="" class="shop__a">Shop now</a>
             </div>
         </div>
@@ -41,12 +45,12 @@
 
     <!-- Start Products Section -->
     <section id="products">
-        <div class="conntainer">
+        <div class="container">
             <div class="products__searchbar">
-                <input type="text" placeholder="Search by name">
+                <input type="text" placeholder="Search by name" class="products__search">
                 <div class="products__display">
-                    <i class="fas fa-bars"></i>
-                    <i class="fas fa-th-large"></i>
+                    <i class="fas fa-bars products__icon"></i>
+                    <i class="fas fa-th-large products__icon"></i>
                 </div>
                 <div class="products__filter">
                     <label for="">Filter by</label>
@@ -59,7 +63,25 @@
             <div class="products__items">
                 <div class="products__item">
                     <div class="products__add">
-                        <span class="products__price">20$</span>
+                        <span class="products__price">20.0$</span>
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                    <div class="products__details">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="products__item">
+                    <div class="products__add">
+                        <span class="products__price">20.0$</span>
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                    <div class="products__details">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="products__item">
+                    <div class="products__add">
+                        <span class="products__price">20.0$</span>
                         <i class="fas fa-cart-plus"></i>
                     </div>
                     <div class="products__details">
@@ -73,23 +95,82 @@
 
     <!-- Start Footer  -->
     <footer id="footer">
-        <div class="container">
-            <div class="footer__contact">
-                <p class="footer__phone">Phone: +564855554</p>
-                <p class="footer__email">Email: lamar@gmail.com</p>
-                <div class="footer__social">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-pinterest-p"></i>
-                </div>
+        <div class="footer__div">
+            <img
+              src="/images/2591879936_67270a1b-efca-4ecf-8988-186863f6853d.png"
+              alt="LMAR Express Logo"
+              class="footer__logo"
+            />
+            <div class="footer__social">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-pinterest-p"></i>
             </div>
-            <div class="footer__letter">
-                <p>You can trust us, we only send promo offers.</p>
-                <input type="email" placeholder="Your Email Address" class="footer__input">
-                <button class="footer__btn">Subscribe</button>
+          </div>
+          <div class="footer__div">
+            <h2 class="footer__heading">
+              Support
+            </h2>
+            <span class="footer__span">
+              Contact US
+            </span>
+            <span class="footer__span">
+              FAQ
+            </span>
+            <span class="footer__span">
+              Downloads
+            </span>
+            <span class="footer__span">
+              Lorem Ipsum
+            </span>
+            <span class="footer__span">
+              Lorem Ipsum
+            </span>
+            <span class="footer__span">
+              Lorem Ipsum
+            </span>
+          </div>
+          <div class="footer__div">
+            <h2 class="footer__heading">
+              LMAR Express
+            </h2>
+            <span class="footer__span">
+              About LMAR Express
+            </span>
+            <span class="footer__span">
+              LMAR Express Lorem
+            </span>
+            <span class="footer__span">
+              Careers
+            </span>
+            <span class="footer__span">
+              Lorem Ipsum
+            </span>
+            <span class="footer__span">
+              Lorem Ipsum
+            </span>
+          </div>
+          <div class="footer__div">
+            <div class="footer4__div">
+              <i class="fas fa-envelope"></i>
+              <p class="footer4__p">
+                Stay up to date on the latest offers from LMAR Express
+              </p>
             </div>
-        </div>
+            <input
+              type="text"
+              id="Subscribe_email"
+              placeholder="Enter your e-mail address"
+            />
+            <button
+              class="form__btn footer__button"
+              id="subscribeButton"
+              type="submit"
+            >
+              Subscribe
+            </button>
+          </div>
     </footer>
     <!-- End Footer -->
 </body>
