@@ -1,15 +1,18 @@
+let generateId = function () {
+  idCounter++;
+  localStorage.setItem("idCounter", JSON.stringify(idCounter));
+  return idCounter;
+}
+
+
+
 let addItem = function addItem(array, item) {
-  if (array.length > 0) {
-    let idItem = array[array.length - 1].id;
-    idItem++;
-    item.id = idItem;
-  }
   return [...array, item];
 };
 
 
 let deleteItemById = function (array, delId) {
-  return array.filter(val => val.id !== delId);
+  return array.filter(val => val.Id !== delId);
 };
 
 function clearList() {
@@ -25,6 +28,7 @@ if (typeof module !== "undefined") {
     addItem,
     deleteItemById,
     searchFunction,
-    clearList
+    clearList,
+    generateId
   };
 }
