@@ -1,40 +1,40 @@
 // The Seller Page
 // Add Form
 
-let addName = document.querySelector('#addName');
-let addDetails = document.querySelector('#addDetails');
-let addPrice = document.querySelector('#addPrice');
-let addImgUrl = document.querySelector('#addImgUrl');
-let addCategory = document.querySelector('#addCategory');
-let addButton = document.querySelector('#addButton');
+const addName = document.querySelector('#addName');
+const addDetails = document.querySelector('#addDetails');
+const addPrice = document.querySelector('#addPrice');
+const addImgUrl = document.querySelector('#addImgUrl');
+const addCategory = document.querySelector('#addCategory');
+const addButton = document.querySelector('#addButton');
 
 //Edit Form
 
-let editName = document.querySelector('#editName');
-let editDetails = document.querySelector('#editDetails');
-let editPrice = document.querySelector('#editPrice');
-let editImgUrl = document.querySelector('#editImgUrl');
-let editCategory = document.querySelector('#editCategory');
-let editButton = document.querySelector('#editButton');
+const editName = document.querySelector('#editName');
+const editDetails = document.querySelector('#editDetails');
+const editPrice = document.querySelector('#editPrice');
+const editImgUrl = document.querySelector('#editImgUrl');
+const editCategory = document.querySelector('#editCategory');
+const editButton = document.querySelector('#editButton');
 
 
 
 // XXXX
 
-let searchInput = document.querySelector('.products__searchinput');
-let sellerListView = document.querySelector('.seller__icon--list');
-let sellerGridView = document.querySelector('.seller__icon--grid');
+const searchInput = document.querySelector('.products__searchinput');
+const sellerListView = document.querySelector('.seller__icon--list');
+const sellerGridView = document.querySelector('.seller__icon--grid');
 
-let productsItemsSeller = document.querySelector('.products__items');
-let productsItemsCustomer = document.querySelector('.customers__products__items');
+const productsItemsSeller = document.querySelector('.products__items');
+const productsItemsCustomer = document.querySelector('.customers__products__items');
 
-let body = document.querySelector('body');
+const body = document.querySelector('body');
 
 // The Customer Page
 
-let searchInputCustomer = document.querySelector('.products__search');
-let customerListView = document.querySelector('.customer__icon--list');
-let customerGridView = document.querySelector('.customer__icon--grid');
+const searchInputCustomer = document.querySelector('.products__search');
+const customerListView = document.querySelector('.customer__icon--list');
+const customerGridView = document.querySelector('.customer__icon--grid');
 
 
 
@@ -119,40 +119,34 @@ function removeProducts() {
 
 function showProducts() {
     productsItemsSeller.innerHTML = '';
-
-
     for (let i = 0; i < productsDataBase.length; i++) {
+        let div1 = document.createElement('div');
+        div1.setAttribute('class', "products__item");
+        let div2 = document.createElement('div');
+        div2.setAttribute('class', "products__add");
+        let i1 = document.createElement('i');
+        i1.setAttribute('class', `fas fa-trash-alt seller__products__remove${i}`);
+        let i2 = document.createElement('i');
+        i2.setAttribute('class', `fas fa-edit seller__products__edit${i}`);
+        let div3 = document.createElement('div');
+        div3.setAttribute('class', "products__details");
+        let heading2 = document.createElement('h2');
+        heading2.textContent = `${productsDataBase[i]["Name"]}`;
+        let paragraph = document.createElement('p');
+        paragraph.textContent = `${productsDataBase[i]["Details"]}`;
+        let heading3 = document.createElement('h3');
+        heading3.textContent = `${productsDataBase[i]["Category"]}`;
+        let priceHeading = document.createElement('h2');
+        priceHeading.textContent = `${productsDataBase[i]["Price"]}`;
 
-        productsItemsSeller.innerHTML += `<div class="products__item">
-        <div class="products__add">
-            <i class="fas fa-trash-alt seller__products__remove${i}"></i>
-            <i class="fas fa-edit seller__products__edit${i}"></i>
-        </div>
-        <div class="products__details">
-            <h2> ${productsDataBase[i]["Name"]}</h2>
-            <p>${productsDataBase[i]["Details"]}</p>
-            <h3> ${productsDataBase[i]["Category    "]}
-        </div>
-    </div>`;
-
-
-        //adddeven
+        div1.appendChild(div2);
+        div2.appendChild(i1);
+        div2.appendChild(i2);
+        div1.appendChild(div3);
+        div3.appendChild(heading2);
+        div3.appendChild(paragraph);
+        div3.appendChild(heading3);
+        productsItemsSeller.appendChild(div1);
     }
     removeProducts();
 }
-
-
-// search
-searchTodo.addEventListener('keyup', function () {
-    let filter = searchInput.value.toUpperCase();
-    let item = document.querySelector('.products__item');
-    for (let i = 0; i < item.length; i++) {
-        let title = item[i].getElementsByTagName('h2')[0];
-        let titleVal = title.textContent;
-        if (titleVal.toUpperCase().indexOf(filter) > -1) {
-            item[i].style.display = '';
-        } else {
-            item[i].style.display = 'none';
-        }
-    }
-});
